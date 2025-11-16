@@ -1,0 +1,109 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-family:"Inter", system-ui, sans-serif ;
+  color: #333;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #1dbf73;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover, .nav-item:hover {
+  color: #1dbf73;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-outline {
+  padding: 8px 16px;
+  border: 1px solid #1dbf73;
+  color: #1dbf73;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background-color: #1dbf73;
+  color: white;
+}
+
+.btn-green {
+  padding: 8px 16px;
+  background-color: #1dbf73;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  /* text-decoration: none; */
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s;
+}
+
+.btn-green:hover {
+  background-color: #17a866;
+}
+
+.nav-links .active {
+  color: #1dbf73;
+  font-weight: 600;
+  border-bottom: 2px solid #1dbf73;
+}
+
+/* .user-name {
+  font-weight: 500;
+  color: #333;
+} */
+
+.active {
+  color: #1dbf73;       
+  font-weight: 600;     
+  border-bottom: 2px solid #1dbf73;  /* underline */
+}
+
+
+.user-name  {
+  margin-right: 10px;
+  font-weight: 500;
+  font-family: inherit;
+  color: #333;
+  margin-top: 5px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}

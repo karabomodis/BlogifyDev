@@ -1,0 +1,168 @@
+
+
+.community-container {
+  min-height: 80vh;
+  padding: 3rem 10%;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.create-blog textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+
+
+.btn{
+   background-color: #10a37f;
+  color: #fff;
+  padding: 0.45rem 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease,transform 0,1s ease;
+}
+
+.btn:hover{
+   background-color: #0d8f6f;
+  transform: scale(1.03);
+}
+
+
+.blog-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+  /* flex-wrap: wrap; */
+}
+
+.create-blog .btn{
+  /* display: inline-block; */
+  width: fit-content;
+  margin-top: 0.5rem;
+
+}
+
+.community-blogs-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  font-family: inherit;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.author-name {
+  font-weight: 600;
+  color: #10a37f;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: #555;
+  /* font-style: italic; */
+  letter-spacing: 0.3px;
+}
+
+.blog-content {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.my-posts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.my-posts-header button {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  background-color: #10a37f;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.my-posts-header button:hover {
+  background-color: #0d8f6f;
+  transform: scale(1.03);
+}
+
+.btn-small {
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+/* Only make buttons smaller on MyPosts page */
+.myposts-page .blog-actions .btn {
+  padding: 0.3rem 0.6rem !important;
+  font-size: 0.8rem !important;
+}
+
+.myposts-page .my-posts-header button {
+  padding: 0.35rem 0.7rem !important;
+  font-size: 0.85rem !important;
+}
+
+.blog-title-input,
+.blog-subtitle-input {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.8rem;
+  font-family: inherit;
+}
+
+.blog-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.blog-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.blog-image img,
+.image-preview img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
