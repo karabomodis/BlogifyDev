@@ -19,7 +19,7 @@ function Community({ currentUser }) {
   useEffect(() => {
     if (!token) return navigate("/");
 
-    fetch("http://localhost:5000/api/posts", {
+    fetch("https://blogifydev-backend-1.onrender.com/api/posts", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => {

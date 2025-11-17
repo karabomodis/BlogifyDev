@@ -20,7 +20,7 @@ function MyPosts({ currentUser }) {
 
     const fetchMyPosts = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/posts/my-posts", {
+        const res = await fetch("https://blogifydev-backend-1.onrender.com/api/posts/my-posts", {
           headers: { Authorization: `Bearer ${token}` },
         });
         if (!res.ok) throw new Error("Failed to fetch posts");
@@ -37,7 +37,7 @@ function MyPosts({ currentUser }) {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/posts/${id}`, {
+      const res = await fetch(`https://blogifydev-backend-1.onrender.com/api/posts/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -84,7 +84,7 @@ function MyPosts({ currentUser }) {
         headers = { "Content-Type": "application/json", Authorization: `Bearer ${token}` };
       }
 
-      const res = await fetch(`http://localhost:5000/api/posts/${id}`, {
+      const res = await fetch(`https://blogifydev-backend-1.onrender.com/api/posts/${id}`, {
         method: "PUT",
         headers,
         body,
@@ -155,7 +155,7 @@ function MyPosts({ currentUser }) {
                   </div>
                 ) : post.imageUrl ? (
                   <div className="blog-image">
-                    <img src={`http://localhost:5000${post.imageUrl}`} alt="Current Blog" />
+                    <img src={`https://blogifydev-backend-1.onrender.com${post.imageUrl}`} alt="Current Blog" />
                   </div>
                 ) : null}
 
@@ -174,7 +174,7 @@ function MyPosts({ currentUser }) {
                 {post.subtitle && <h4 className="blog-subtitle">Subtitle: {post.subtitle}</h4>}
                 {post.imageUrl && (
                   <div className="blog-image">
-                    <img src={`http://localhost:5000${post.imageUrl}`} alt="Blog" />
+                    <img src={`https://blogifydev-backend-1.onrender.com${post.imageUrl}`} alt="Blog" />
                   </div>
                 )}
                 <p className="blog-content">{post.content}</p>
