@@ -40,7 +40,7 @@ function Community({ currentUser }) {
     if (newImage) formData.append("image", newImage);
 
     try {
-      const res = await fetch("http://localhost:5000/api/posts", {
+      const res = await fetch("https://blogifydev-backend-1.onrender.com/api/posts", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
@@ -64,7 +64,7 @@ function Community({ currentUser }) {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:5000/api/posts/${id}`, {
+      const res = await fetch(`https://blogifydev-backend-1.onrender.com/api/posts/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -89,7 +89,7 @@ function Community({ currentUser }) {
         headers = { "Content-Type": "application/json", Authorization: `Bearer ${token}` };
       }
 
-      const res = await fetch(`http://localhost:5000/api/posts/${id}`, {
+      const res = await fetch(`https://blogifydev-backend-1.onrender.com/api/posts/${id}`, {
         method: "PUT",
         headers,
         body,
@@ -166,7 +166,7 @@ function Community({ currentUser }) {
             {post.subtitle && <h4 className="blog-subtitle">Subtitle: {post.subtitle}</h4>}
             {post.imageUrl && (
               <div className="blog-image">
-                <img src={`http://localhost:5000${post.imageUrl}`} alt="Blog" />
+                <img src={`https://blogifydev-backend-1.onrender.com${post.imageUrl}`} alt="Blog" />
               </div>
             )}
 
@@ -179,7 +179,7 @@ function Community({ currentUser }) {
                 />
                 <input type="file" accept="image/*" onChange={(e) => setEditedImage(e.target.files[0])} />
                 {editedImage ? <img src={URL.createObjectURL(editedImage)} alt="Preview" /> :
-                  post.imageUrl && <img src={`http://localhost:5000${post.imageUrl}`} alt="Current" />}
+                  post.imageUrl && <img src={`https://blogifydev-backend-1.onrender.com${post.imageUrl}`} alt="Current" />}
                 <div className="blog-actions">
                   <button className="btn" onClick={() => handleSave(post._id)}>Save</button>
                   <button className="btn" onClick={handleCancel}>Cancel</button>
